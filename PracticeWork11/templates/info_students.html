@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>info students</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: 'Montserrat', sans-serif;
+   
+        
+    }
+    .btn2 {
+        width: 1000px;
+        height: 50px;
+    }
+ 
+
+</style>
+<body>
+    <h1>Информация о студентах</h1>
+    <div>
+        {% for student in student_list %}
+        <p>{{ student }}</p>
+        <p><a href="{% url "data_change" student.slug %}"><button class="btn1">Student enditing data</button> </a></p>
+        {% endfor %}
+    </div>
+    <div style="position: relative;left: 600px;bottom: 100px;">
+        <p><a href="{% url "add_student" %}"><button class="btn2">Add new student</button></a></p>
+
+    </div>
+
+    
+</body>
+</html>

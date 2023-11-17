@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
+</style>
+<body>
+    <h1>Информация о студенте и изменение  данных</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input value="{{ student.first_name }}"  type="text" name="first_name">
+        <input value="{{ student.last_name }}" type="text" name="last_name">
+        <input value="{{ student.pay_or_not }}" type="text" name="pay_or_not">
+        <input value="{{ student.grade }}" type="number" name="grade">
+        <input type="submit" value="Update">
+
+    </form>
+
+    
+</body>
+</html>

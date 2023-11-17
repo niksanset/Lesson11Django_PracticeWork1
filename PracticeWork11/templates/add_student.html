@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
+</style>
+<body>
+    <h1>Добавить студента</h1>
+    <form method ="POST">
+        {% csrf_token %}
+        <p>Имя</p>
+        <input type="text" name='first_name'>
+        <p>Фамилия</p>
+        <input type="text" name="last_name">
+        <p>Возраст</p>
+        <input type="number" name="age">
+        <p>Курс</p>
+        <input type="text" name="course">
+        <p>Музыкальный инструмент</p>
+        <input type="text" name="music_instrument">
+        <p>Успеваемость</p>
+        <input type="number" name="grade">
+        <p>Pay_or_not</p>
+        <input type="text" name="pay_or_not">
+        <input type="submit" value="Create">
+
+
+
+
+
+    </form>
+</body>
+</html>
